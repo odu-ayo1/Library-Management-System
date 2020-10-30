@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author REHOBOTH
+ * @author Oduola Ayomide
  */
 public class Books extends Dbh {
     //BooksView Methods
