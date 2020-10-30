@@ -1,0 +1,65 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ * Author:  REHOBOTH
+ * Created: Mar 9, 2020
+ */
+
+CREATE TABLE Students(
+    STUDENTID INT PRIMARY KEY,
+    FIRSTNAME VARCHAR(200),
+    LASTNAME VARCHAR(200),
+    EMAILADDRESS VARCHAR(500),
+    AGE int,
+    GENDER VARCHAR(20),
+    ADDRESS VARCHAR(200),
+    USERNAME VARCHAR(500),
+    PASSWORD VARCHAR(500)
+);
+
+CREATE TABLE Categories(
+    CATEGORYID INT PRIMARY KEY,
+    CATEGORYNAME VARCHAR(200),
+    STATUS VARCHAR(20)
+);
+
+CREATE TABLE Books(
+    BOOKID INT PRIMARY KEY,
+    TITLE VARCHAR(200),
+    AUTHOR VARCHAR(200),
+    DESCRIPTION VARCHAR(1000),
+    THUMBNAILPATH VARCHAR(500),
+    BOOKPATH VARCHAR(500)
+);
+
+CREATE TABLE BookCategories(
+    BOOKCATEGORIID INT PRIMARY KEY,
+    BOOKID INT,
+    CATEGORYID INT
+);
+
+CREATE TABLE StudentBook(
+    STUDENTBOOKID INT PRIMARY KEY,
+    STUDENTID INT,
+    BOOKID INT
+);
+
+CREATE TABLE BookRequest(
+    BOOKREQUESTID INT PRIMARY KEY,
+    STUDENTID INT,
+    BOOKID INT
+);
+
+CREATE TABLE Contact(
+    CONTACTID INT PRIMARY KEY,
+    FULLNAME varchar(500),
+    EMAIL varchar(500),
+    SUBJECT varchar(500),
+    BODY varchar(1500)
+);
+
+
+
